@@ -14,5 +14,15 @@ namespace ARPresentation.Extensions
                 array[i] = value;
             }
         }
+
+        public static bool IsPrefab(this GameObject gameObject)
+        {
+            return gameObject.scene.name is null && gameObject.scene.rootCount == 0;
+        }
+
+        public static float Sum(this Vector3 vector)
+        {
+            return vector.x + vector.y + vector.z;
+        }
     }
 }

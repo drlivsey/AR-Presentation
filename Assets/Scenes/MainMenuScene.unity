@@ -1603,7 +1603,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d7e7ed74d1d54744995758347b1eea5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_sceneName: 
+  m_sceneName: WIndTurbineAR
   m_loadingMode: 0
   m_onLoadingBegin:
     m_PersistentCalls:
@@ -1708,8 +1708,8 @@ RectTransform:
   - {fileID: 1569771007}
   - {fileID: 1190689002}
   - {fileID: 1908524001}
-  - {fileID: 1196432501}
   - {fileID: 1869517506}
+  - {fileID: 1196432501}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3794,7 +3794,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4706,12 +4706,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 143ac7fa4ed20c64080eba218c0ece63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_unfadeOnStart: 1
   m_fadeImage: {fileID: 1196432502}
   m_fadeDuration: 0.5
   m_onFadeBegin:
     m_PersistentCalls:
       m_Calls: []
   m_onFadeEnd:
+    m_PersistentCalls:
+      m_Calls: []
+  m_onFadeInBegin:
+    m_PersistentCalls:
+      m_Calls: []
+  m_onFadeInEnd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 267945196}
+        m_TargetAssemblyTypeName: ARPresentation.ScenesManagement.ScenesLoader, Assembly-CSharp
+        m_MethodName: LoadSceneAsync
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_onFadeOutBegin:
+    m_PersistentCalls:
+      m_Calls: []
+  m_onFadeOutEnd:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &1609727777
@@ -8557,7 +8582,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_onClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1577161848}
+        m_TargetAssemblyTypeName: ARPresentation.Fader, Assembly-CSharp
+        m_MethodName: FadeIn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 750832261}
+        m_TargetAssemblyTypeName: ARPresentation.Tweeners.OffsetTweener, Assembly-CSharp
+        m_MethodName: TweenBackwards
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1869517508}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
+        m_MethodName: set_interactable
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &919132149262270777
 GameObject:
   m_ObjectHideFlags: 0
